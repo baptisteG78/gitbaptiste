@@ -24,6 +24,7 @@ def search_user(name):
     logging.basicConfig(filename="restapi.log", filemode='w', level=logging.DEBUG)
     logging.debug(data)
     return jsonify(data=data),200
+    
 
 
 @app.route("/welcome/<string:name>")
