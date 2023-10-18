@@ -65,4 +65,4 @@ jobs:
           git config  user.email "baptiste.danvert.edu@groupe-gema.com"
           git config  user.name "baptisteg78"
           git commit -a -m 'Env file is updated with the new image ${{ github.ref_name }}'
-          git push https://${{ secrets.GITLEAKS }}@github.combaptisteg78/devsecopslab.git
+          git push https://${{ secrets.GITLEAKS }}@github.com/baptisteg78/devsecopslab.git
