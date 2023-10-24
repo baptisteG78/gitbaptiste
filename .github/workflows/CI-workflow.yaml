@@ -19,7 +19,15 @@ jobs:
           ref: '${{ github.ref_name }}'
           token: ${{ secrets.GITLEAKS }}
       
-          
+      - name: Install Gitleaks
+        run: |
+          wget https://github.com/zricethezav/gitleaks/releases/latest/download/gitleaks-linux-amd64 -O gitleaks
+          chmod +x gitleaks
+          sudo mv gitleaks /usr/local/bin/
+
+      - name: Run Gitleaks Scan
+        run: |
+          gitleaks --path=./ --verbose
 
       - name: Install dependencies 
         run: |
