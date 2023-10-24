@@ -57,7 +57,8 @@ jobs:
 
       - name: Run Trivy Scan
         run: |
-          trivy --ignore-unfixed -f json -o trivy-report.json .
+          docker pull mon-application:latest
+          trivy --ignore-unfixed -f json -o trivy-report.json mon-application:latest
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
