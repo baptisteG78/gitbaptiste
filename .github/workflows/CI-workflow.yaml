@@ -26,7 +26,13 @@ jobs:
           python -m pip install --upgrade pip
           python3 -m pip install semgrep
           if [ -f ./requirements.txt ]; then pip install -r ./requirements.txt; fi
+      - name: Install  Sempgrep
+        run: |
+          pip install semgrep
 
+      - name: Run Sempgrep on vulnerable-flask-app.py
+        run: |
+          semgrep -f python vulnerable-flask-app.py
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
