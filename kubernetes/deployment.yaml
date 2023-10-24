@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: baptisteg78/devsecopslab:v27
+          image: baptisteg78/devsecopslab:v31
           resources:
             requests:
               memory: "50Mi"
