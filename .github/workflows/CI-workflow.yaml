@@ -32,7 +32,7 @@ jobs:
 
       - name: Run Sempgrep on vulnerable-flask-app.py
         run: |
-          semgrep -f python vulnerable-flask-app.py
+          semgrep -f python app/vulnerable-flask-app.py
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
