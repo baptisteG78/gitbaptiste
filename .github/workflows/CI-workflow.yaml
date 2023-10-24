@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Gitleaks Scan
         run: |
-          gitleaks --path=./ --verbose
+          docker run --rm -v "$(pwd):/code" zricethezav/gitleaks:v7.3.1 --path="/code" --verbose
 
       - name: Install dependencies 
         run: |
