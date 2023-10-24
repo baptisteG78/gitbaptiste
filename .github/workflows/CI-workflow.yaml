@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Gitleaks Scan
         run: |
-          gitleaks --path=./ --verbose
+          $GOPATH/bin/gitleaks --path=./ --verbose
 
       - name: Install dependencies 
         run: |
